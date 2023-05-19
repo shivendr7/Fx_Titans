@@ -107,8 +107,10 @@ Exchange Rates
 
 <form action="initiateTransaction" method="post" style = "text-align: center; margin-top: 40px">
 <pre>
+<div class="message">
 Enter Amount(&#8377;)
-<input type="text" placeholder="Enter amount" style = "margin-right: 20px; margin-bottom: 20px">
+</div>
+<input type="text" id="amountfield" placeholder="Enter amount" style = "margin-right: 20px; margin-bottom: 20px">
 Select currency
 <select name="currency">
 <option value="INR">INR</option>
@@ -215,6 +217,16 @@ Past Transactions
               $('<td>').text(txn.exchangeRate)
         ).appendTo('#txnTableBody');
     });
+  });
+
+
+  const input = document.querySelector("#amountfield");
+  input.addEventListener("input", (event) => {
+    if (event.target.value > 5000) {
+      document.querySelector(".message").innerHTML = "The value is greater than wallet amount";
+    } else {
+      document.querySelector(".message").innerHTML = "Enter Amount(&#8377;)";
+    }
   });
 </script>
 
