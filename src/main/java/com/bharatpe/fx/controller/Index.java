@@ -17,8 +17,8 @@ public class Index {
     @GetMapping(value = "/")
     public ModelAndView home() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("index");
-        log.info("Loading index page");
+        modelAndView.setViewName("customer");
+        log.info("Loading customer page");
         return modelAndView;
     }
 

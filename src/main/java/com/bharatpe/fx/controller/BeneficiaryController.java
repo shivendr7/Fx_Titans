@@ -5,12 +5,13 @@ import com.bharatpe.fx.service.BeneficiaryService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Map;
 
-@RestController
+@Controller
 @Slf4j
 public class BeneficiaryController {
 
@@ -19,6 +20,14 @@ public class BeneficiaryController {
 
     public BeneficiaryController(BeneficiaryService beneficiaryService) {
         this.beneficiaryService = beneficiaryService;
+    }
+
+    @GetMapping("/newBeneForm")
+    public ModelAndView getAddBeneForm(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("index");
+        log.info("Loading add bene details page");
+        return modelAndView;
     }
 
     @PostMapping(value = "addBene",consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
