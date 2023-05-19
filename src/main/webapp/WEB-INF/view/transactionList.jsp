@@ -31,6 +31,7 @@
       <th>Source Currency</th>
       <th>Destination Currency</th>
       <th>Exchange Rate</th>
+      <th>Transfer Type</th>
     </tr>
     </thead>
     <tbody id = "txnTableBody">
@@ -46,12 +47,17 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">Transaction Progress</h4>
+        <h4 class="modal-title">Transaction Details</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body">
+        <div class="row">
+          <table class="table borderless" aria-describedby="txn_meta_Data" id = "txn_meta_data">
+
+          </table>
+        </div>
         <div class="progress">
           <div class="progress-bar bg-success" style="width:10%">
             In BP Wallte
@@ -78,51 +84,77 @@
   const transactionList =
           [
             {
-              "id": 0,
-              "beneId": 1,
+              "TransactionId": 0,
+              "BeneId": 1,
               "BeneName": "Sanju",
-              "sourceCurrency":"INR",
-              "destinationCurrency":"USD",
-              "exchangeRate":"68"
+              "SourceCurrency":"INR",
+              "DestinationCurrency":"LKR",
+              "ExchangeRate":"3.7",
+              "ServiceCharge":"50",
+              "TransferType":"Instant"
             },
             {
-              "id": 2,
-              "beneId": 1,
+              "TransactionId": 2,
+              "BeneId": 1,
               "BeneName": "Sanju",
-              "sourceCurrency":"INR",
-              "destinationCurrency":"USD",
-              "exchangeRate":"68"
+              "SourceCurrency":"INR",
+              "DestinationCurrency":"LKR",
+              "ExchangeRate":"3.7",
+              "ServiceCharge":"50",
+              "TransferType":"delayed"
             },
             {
-              "id": 3,
-              "beneId": 1,
+              "TransactionId": 3,
+              "BeneId": 1,
               "BeneName": "Sanju",
-              "sourceCurrency":"INR",
-              "destinationCurrency":"USD",
-              "exchangeRate":"68"
+              "SourceCurrency":"INR",
+              "DestinationCurrency":"LKR",
+              "ExchangeRate":"3.7",
+              "ServiceCharge":"50",
+              "TransferType":"delayed"
             },
             {
-              "id": 4,
-              "beneId": 1,
+              "TransactionId": 4,
+              "BeneId": 1,
               "BeneName": "Sanju",
-              "sourceCurrency":"INR",
-              "destinationCurrency":"USD",
-              "exchangeRate":"68"
+              "SourceCurrency":"INR",
+              "DestinationCurrency":"LKR",
+              "ExchangeRate":"3.7",
+              "ServiceCharge":"50",
+              "TransferType":"Instant"
             }];
 
   const txnTable = $('#table');
   $(function () {
     $.each(transactionList, function(i, txn) {
       const $tr = $('<tr>').append(
-              $('<td data-toggle="modal"  data-target="#txnModal" >').text(txn.id),
-              $('<td>').text(txn.beneId),
+              $('<td  style="cursor: pointer;" class = "txn_id_cell" txnId = '+txn.TransactionId+'>').text(txn.TransactionId),
+              $('<td>').text(txn.BeneId),
               $('<td>').text(txn.BeneName),
-              $('<td>').text(txn.sourceCurrency),
-              $('<td>').text(txn.destinationCurrency),
-              $('<td>').text(txn.exchangeRate)
+              $('<td>').text(txn.SourceCurrency),
+              $('<td>').text(txn.DestinationCurrency),
+              $('<td>').text(txn.ExchangeRate),
+              $('<td>').text(txn.TransferType)
       ).appendTo('#txnTableBody');
 
     });
+  });
+
+
+  $(document).on('click','.txn_id_cell',function(){
+    //alert();
+    let $txnMetaDataTable = $("#txn_meta_data");
+    $txnMetaDataTable.empty();
+    const currentTxnId = $(this).attr("txnId");
+    const txnObj = transactionList.filter(txn => txn.TransactionId == currentTxnId)[0];
+    let tbody = "<tbody>";
+    $.each(txnObj, function(key, value) {
+       tbody += "<tr><td>" + key + "</td> <td>" + value + "</td></tr>";
+    });
+
+    tbody +="</tbody>";
+    $txnMetaDataTable.append(tbody);
+    $("#txnModal").modal('show');
   });
 
 </script>

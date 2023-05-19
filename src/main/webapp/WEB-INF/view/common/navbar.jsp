@@ -14,7 +14,7 @@
                 <a class="nav-link" href="#">BharatPe Forex</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="${contextPath}/About">About</a>
+                <a class="nav-link" href="${contextPath}">Profile</a>
             </li>
 
         </ul>
