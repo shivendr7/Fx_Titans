@@ -55,17 +55,18 @@
 
 
 
-<div style = "text-align: center; margin-top: 20px; font-weight: bold; font-size: 24px;"  class="col-sm-12">
-Add beneficiary details
+<div style = "text-align: center; margin-top: 100px; font-weight: bold; font-size: 30px;"  class="col-sm-12">
+Add Beneficiary Details
 </div>
-<form style = "text-align: center; margin-top: 20px" action="addBene" method="post">
+<form style = "text-align: center; margin-top: 30px" action="addBene" method="post">
 <pre>
-  Beneficiary Account No: <input type="text" name="beneficiary_account_number" placeholder="Beneficiary Account Number">
-  Confirm Beneficiary Account no: <input type="text" name="confirm_beneficiary_account_number" placeholder="Confirm Beneficiary Account Number">
-  IFSCode: <input type="text" name="ifsc_code" placeholder="IFSC Code">
-  Bank Name: <input type="text" name="bank_name" placeholder="Bank Name">
-  Branch Name: <input type="text" name="branch_name" placeholder="Branch Name">
-  <input style = "text-align: center; margin-top: 40px" type="submit" value="Continue">
+  Beneficiary Account No:           <input type="text" name="beneficiary_account_number" placeholder="Beneficiary Account Number">
+  Confirm Beneficiary Account No:   <input type="text" name="confirm_beneficiary_account_number" placeholder="Confirm Beneficiary Account Number">
+  IFSCode:                          <input type="text" name="ifsc_code" placeholder="IFSC Code">
+  Bank Name:                        <input type="text" name="bank_name" placeholder="Bank Name">
+  Branch Name:                      <input type="text" name="branch_name" placeholder="Branch Name">
+
+  <input style = "text-align: center; margin-top: 40px" type="submit" value="Proceed to Pay">
 </pre>
 </form>
 </body>
