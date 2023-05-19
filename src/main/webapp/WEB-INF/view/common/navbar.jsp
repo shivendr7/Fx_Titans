@@ -1,25 +1,20 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="margin-bottom:50px;">
-    <a class="navbar-brand" href="${contextPath}/admin">
-        <c:choose>
-            <c:when test="${pageContext.request.userPrincipal.name == 'admin@gmail.com'}">
-                Admin Home
-            </c:when>
-            <c:otherwise>
-                Site User
-            </c:otherwise>
-        </c:choose>
-
+    <a class="navbar-brand" href="#">
+        <div >
+           <img src="${contextPath}/resources/images/bplogo.jpg" alt="bplogo" width="30" height="30" style="center">
+        </div>
     </a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="${contextPath}/admin/profile">Profile</a>
+            <li class="nav ml-auto" style="margin-right:18px;">
+                <a class="nav-link" href="#">BharatPe Forex</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="${contextPath}/admin/getAgeTransactionPattern">Age Wise Pattern</a>
+                <a class="nav-link" href="${contextPath}/About">About</a>
             </li>
 
         </ul>
