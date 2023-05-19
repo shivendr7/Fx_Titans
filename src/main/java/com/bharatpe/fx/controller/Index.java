@@ -34,6 +34,14 @@ public class Index {
         return modelAndView;
     }
 
+    @RequestMapping(value = "addCostumer")
+    public ModelAndView addCostumer() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("addCostumer");
+        log.info("Loading transaction details page");
+        return modelAndView;
+    }
+
     @RequestMapping(value = "initiateTransaction")
     public ModelAndView initiateTransaction() {
         ModelAndView modelAndView = new ModelAndView();

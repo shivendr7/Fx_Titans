@@ -30,6 +30,15 @@ public class BeneficiaryController {
         return modelAndView;
     }
 
+    @PostMapping(value = "addCostumer",consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+    public ModelAndView addCostumer(@RequestParam Map<String, String> formData) {
+//        beneficiaryService.saveBene(formData);
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("index");
+        log.info("Loading transaction details page");
+        return modelAndView;
+    }
+
 
 
     @GetMapping("/{beneId}")
