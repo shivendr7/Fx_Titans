@@ -23,7 +23,7 @@ public class Index {
     }
 
     @RequestMapping(value = "addBene")
-    public ModelAndView fillInTransactionDetails(/*@ModelAttribute("beneficiary") Beneficiary beneficiary*/) {
+    public ModelAndView fillInTransactionDetails() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("transactionDetails");
         log.info("Loading transaction details page");
