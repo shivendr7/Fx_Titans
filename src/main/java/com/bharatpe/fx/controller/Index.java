@@ -1,11 +1,11 @@
 package com.bharatpe.fx.controller;
 
 import com.bharatpe.fx.entitiy.Beneficiary;
+import com.bharatpe.fx.utilities.CurrencyRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -23,10 +23,14 @@ public class Index {
     }
 
     @RequestMapping(value = "addBene")
-    public ModelAndView fillInTransactionDetails() {
+    public ModelAndView fillInTransactionDetails(ModelMap modelMap) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("transactionDetails");
         log.info("Loading transaction details page");
+//        CurrencyRepository repo = new CurrencyRepository();
+//        Object currates = repo.getCurrencyRates("INR", "EUR", "USD", "GBP");
+//        modelMap.addAttribute("currencies", currates);
+//        log.info(currates.toString());
         return modelAndView;
     }
 

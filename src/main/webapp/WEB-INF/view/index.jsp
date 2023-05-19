@@ -11,6 +11,13 @@
       padding: 0;
     }
 
+    select {
+              width: 30%;
+              padding: 10px;
+              border: 1px solid #ccc;
+              margin-bottom: 40px;
+            }
+
     form {
       width: 80%;
       margin: 0 auto;
@@ -58,7 +65,18 @@
 <div style = "text-align: center; margin-top: 100px; font-weight: bold; font-size: 30px;"  class="col-sm-12">
 Add Beneficiary Details
 </div>
-<form style = "text-align: center; margin-top: 30px" action="addBene" method="post">
+
+<form style = "text-align: center; margin-top: 10px;" action="addBene" method="post">
+<h4 style = "text-align: center; margin-top: 40px;">Select a Country</h4>
+<select name="country" style = "text-align: center; margin-top: 10px; margin-bottom: 30px;">
+  <option value="Nepal">Nepal (Nepal Rupee)</option>
+  <option value="Pakistan">Pakistan (Pakistan Rupee)</option>
+  <option value="Poland">Poland (Poland Zloty)</option>
+  <option value="Singapore">Singapore (Singapore Dollar)</option>
+  <option value="South Africa">South Africa (South Africa Rand)</option>
+  <option value="Spain">Spain (Euro Member Countries)</option>
+  <option value="Sri Lanka">Sri Lanka (Sri Lanka Rupee)</option>
+</select>
 <pre>
   Beneficiary Account No:           <input type="text" name="beneficiary_account_number" placeholder="Beneficiary Account Number">
   Confirm Beneficiary Account No:   <input type="text" name="confirm_beneficiary_account_number" placeholder="Confirm Beneficiary Account Number">
