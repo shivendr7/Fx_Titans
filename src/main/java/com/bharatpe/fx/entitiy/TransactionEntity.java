@@ -28,6 +28,12 @@ public class TransactionEntity {
     @Column(name = "source_currency")
     private String sourceCurrency;
 
+    @Column(name = "instant_transafer")
+    private boolean instantTransfer;
+
+    @Column(name = "user_acceptance_rate")
+    private Double userAcceptanceRate;
+
     @Column(name = "destination_currency")
     private String destinationCurrency;
 }
