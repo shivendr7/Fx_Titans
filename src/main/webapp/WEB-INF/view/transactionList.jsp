@@ -84,43 +84,47 @@
   const transactionList =
           [
             {
-              "TransactionId": 0,
+              "TransactionId": 874468965422,
               "BeneId": 1,
               "BeneName": "Sanju",
               "SourceCurrency":"INR",
               "DestinationCurrency":"LKR",
               "ExchangeRate":"3.7",
               "ServiceCharge":"50",
+              "UTR":"98975885437753",
               "TransferType":"Instant"
             },
             {
-              "TransactionId": 2,
+              "TransactionId": 88757856,
               "BeneId": 1,
               "BeneName": "Sanju",
               "SourceCurrency":"INR",
               "DestinationCurrency":"LKR",
               "ExchangeRate":"3.7",
               "ServiceCharge":"50",
+              "UTR":"98975885437753",
               "TransferType":"delayed"
             },
             {
-              "TransactionId": 3,
+              "TransactionId": 4388432934,
               "BeneId": 1,
               "BeneName": "Sanju",
               "SourceCurrency":"INR",
               "DestinationCurrency":"LKR",
               "ExchangeRate":"3.7",
               "ServiceCharge":"50",
+              "UTR":"98975885437753",
               "TransferType":"delayed"
             },
             {
-              "TransactionId": 4,
+              "TransactionId": 644774357,
               "BeneId": 1,
               "BeneName": "Sanju",
               "SourceCurrency":"INR",
               "DestinationCurrency":"LKR",
               "ExchangeRate":"3.7",
               "ServiceCharge":"50",
+              "UTR":"98975885437753",
               "TransferType":"Instant"
             }];
 
