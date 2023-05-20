@@ -116,7 +116,8 @@
         <div class="modal-content">
             <!-- Modal body -->
             <div class="modal-body">
-                Transaction Initiated..
+                <span>Transaction Initiated..</span>
+                <p>Amount will be credited with in 24 hours </p>
             </div>
         </div>
     </div>
